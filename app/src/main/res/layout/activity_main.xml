@@ -11,7 +11,7 @@
         android:layout_width="327dp"
         android:layout_height="321dp"
         android:layout_marginTop="16dp"
-
+        app:layout_constraintBottom_toTopOf="@+id/start"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -22,13 +22,118 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
+        android:layout_marginBottom="17dp"
+        android:fontFamily="serif"
         android:text="Get Started"
         android:textSize="40dp"
         android:textStyle="bold"
-        android:fontFamily="serif"
-
+        app:layout_constraintBottom_toTopOf="@+id/googleButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <Button
+        android:id="@+id/emailButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="19dp"
+        android:text="Continue with Email"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appleButton" />
+
+    <Button
+        android:id="@+id/googleButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:layout_marginBottom="11dp"
+        android:text="Continue with Google"
+        app:layout_constraintBottom_toTopOf="@+id/appleButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/start" />
+
+    <Button
+        android:id="@+id/appleButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="11dp"
+        android:text="Continue with Apple"
+        app:layout_constraintBottom_toTopOf="@+id/emailButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/googleButton" />
+
+<!--    <TextView-->
+<!--        android:id="@+id/signInLink"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Already have an account? Sign in"-->
+<!--        tools:layout_editor_absoluteX="103dp"-->
+<!--        tools:layout_editor_absoluteY="678dp" />-->
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginBottom="9dp"
+        app:layout_constraintBottom_toBottomOf="@+id/emailButton"
+        app:layout_constraintTop_toTopOf="@+id/emailButton"
+        app:srcCompat="@drawable/email"
+        tools:layout_editor_absoluteX="90dp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="11dp"
+        app:layout_constraintBottom_toBottomOf="@+id/googleButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/googleButton"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/search" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginBottom="9dp"
+        app:layout_constraintBottom_toBottomOf="@+id/appleButton"
+        app:layout_constraintTop_toTopOf="@+id/appleButton"
+        app:srcCompat="@drawable/apple"
+        tools:layout_editor_absoluteX="90dp" />
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="649dp">
+
+        <TextView
+            android:id="@+id/account"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_weight="2"
+            android:paddingLeft="55dp"
+            android:text="Already have an account?"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/SIGN"
+            android:layout_width="19dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Sign In"
+            android:textColor="@color/seagreen" />
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

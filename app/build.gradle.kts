@@ -5,12 +5,14 @@ plugins {
 
 android {
     namespace = "com.example.medicare_app"
-    compileSdk = 33
-
+    compileSdk = 34
+    buildFeatures {
+        viewBinding = true
+    }
     defaultConfig {
         applicationId = "com.example.medicare_app"
         minSdk = 24
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
